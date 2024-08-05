@@ -5,6 +5,7 @@ import './App.css'
 import Navegacion from './componets/Navegacion'
 import Header from './componets/Header'
 import Ficha from './componets/Ficha'
+import Footer from './componets/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,8 +33,8 @@ function App() {
           ingredientes="jamon, oregano, tomate"
           precio="15000"
         ></Ficha>
-        
       </div>
+      <Footer></Footer>
     </>
   )
 }

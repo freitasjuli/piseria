@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header= () => {
+const Header = () => {
   return (
     <div className='Header'>
         <h1>!pizzeria Mamma Mia¡</h1>
