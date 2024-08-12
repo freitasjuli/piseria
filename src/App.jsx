@@ -6,6 +6,7 @@ import Navegacion from './componets/Navegacion'
 import Header from './componets/Header'
 import Ficha from './componets/Ficha'
 import Footer from './componets/Footer'
+import RegisterPage from './componets/RegisterPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,7 @@ function App() {
   return (
     <>
       <Navegacion></Navegacion>
-      <Header></Header>
+      {/*<Header></Header>
       <div className='divFicha'>
         <Ficha
           imagen="https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-1239077_640_cl.jpg?alt=media&token=6a9a33da-5c00-49d4-9080-784dcc87ec2c"
@@ -34,7 +35,8 @@ function App() {
           precio="15000"
         ></Ficha>
       </div>
-      <Footer></Footer>
+      <Footer></Footer>*/}
+      <RegisterPage></RegisterPage>
     </>
   )
 }
