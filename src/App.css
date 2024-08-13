@@ -78,3 +78,80 @@
   text-align: center;
   font-size: 15px;
 }
+.divformulario{
+  text-align: center;
+  align-items: center;
+  margin: 10% 30%;
+  background: linear-gradient(#ffffff27, #ffffff27);
+  border-radius: 5vh;
+  box-shadow: 0 0 10px black;
+  padding: 20px;
+}
+.divformulario hr{
+  margin: 10px 100px;
+}
+.divformulario label{
+  display: block;
+  margin: 10px;
+  font-size: 15px;
+}
+.divformulario input{
+  background: linear-gradient(#48484827, #48484827);
+  border-radius: 100vh;
+  width: 90%;
+  height: 30px;
+  padding: 0 10px;
+  border: none;
+  margin: 5px 0;
+}
+.divformulario button{
+  background: linear-gradient(#eb8e0b27, #eb8e0b27);
+  font-size: 18px;
+  padding: 5px 40px;
+  border-radius: 100vh;
+  border: none;
+  transition: all 0.5s;
+}
+.divformulario button:hover{
+  background: linear-gradient(#eb8e0b73,#eb8e0b73);
+  padding: 10px 50px;
+}
+
+.login{
+  text-align: center;
+  align-items: center;
+  margin: 10% 30%;
+  background: linear-gradient(#ffffff27, #ffffff27);
+  border-radius: 5vh;
+  box-shadow: 0 0 10px black;
+  padding: 20px;
+}
+.login hr{
+  margin: 10px 100px;
+}
+.login label{
+  display: block;
+  margin: 10px;
+  font-size: 15px;
+}
+.login input{
+  background: linear-gradient(#48484827, #48484827);
+  border-radius: 100vh;
+  width: 90%;
+  height: 30px;
+  padding: 0 10px;
+  border: none;
+  margin: 5px 0;
+}
+.login button{
+  background: linear-gradient(#eb8e0b27, #eb8e0b27);
+  font-size: 18px;
+  padding: 5px 40px;
+  border-radius: 100vh;
+  border: none;
+  transition: all 0.5s;
+}
+.login button:hover{
+  background: linear-gradient(#eb8e0b73,#eb8e0b73);
+  padding: 10px 50px;
+}

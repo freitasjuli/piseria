@@ -26,12 +26,22 @@ const RegisterPage = () => {
   }   
 
   return (
-    <div>
+    <div className='divformulario'>
         <h1>Formulario de registro</h1>
-        <form>
-            <input type="email" onChange={(event)=>setEmail(event.target.value)}/>
-            <input type="password" onChange={(event)=>setPassword(event.target.value)}/>
-            <input type="password"onChange={(event)=>setConfirmPassword(event.target.value)}/>
+        <hr></hr>
+        <form >
+            <label>
+              Correo electronico
+              <input type="email" onChange={(event)=>setEmail(event.target.value)}/>
+            </label>
+            <label>
+              contreaseña
+              <input type="password" onChange={(event)=>setPassword(event.target.value)}/>
+            </label>
+            <label>
+              Repita la contraseña 
+              <input type="password"onChange={(event)=>setConfirmPassword(event.target.value)}/>
+            </label>
             <button Type="button" onClick={() => validarFormulario()}>Enviar </button>
         </form>
     </div>

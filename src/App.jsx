@@ -7,6 +7,7 @@ import Header from './componets/Header'
 import Ficha from './componets/Ficha'
 import Footer from './componets/Footer'
 import RegisterPage from './componets/RegisterPage'
+import Login from './componets/Login'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,6 +38,7 @@ function App() {
       </div>
       <Footer></Footer>*/}
       <RegisterPage></RegisterPage>
+      <Login></Login>
     </>
   )
 }
