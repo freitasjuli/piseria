@@ -7,17 +7,38 @@ import {pizza} from '../pizzas'
 
 const Home = () => {
     const [listaPizza, setListaPizza] = useState(pizza);
-
-    console.log(listaPizza);
+    const [carrito, setCarrito] = useState([]);
+    
+    const agregarCarrito = (id) => {
+      const product = listaPizza.find((pizza)=> pizza.id === id)
+      setCarrito([...carrito, product])
+      console.log(carrito)
+    }
+    const eliminarCarrito =(id ) => {
+      const indiceProducto = carrito.findIndex(pizza.id === id)
+      setCarrito((estadoPrevio)=>{
+        const nuevoCarrito = [...estadoPrevio]
+        nuevoCarrito.splice(indiceProducto, 1)
+        return nuevoCarrito
+      })
+    }
   return (
     <div>
         <Navegacion></Navegacion>
         <Header></Header>
          <div className='divFicha'>
-        {
-          listaPizza.map((pizza) => <Ficha key={`home-${pizza.id}`} pizza={pizza}></Ficha>)
-        }
-      </div>
+          {
+            listaPizza.map((pizza) => <Ficha key={`home-${pizza.id}`} pizza={pizza} agregarCarrito={agregarCarrito}></Ficha>)
+          }
+          
+        </div>
+        
+        <h2>Carrito</h2>
+        <div className='divficha'>
+          {
+            carrito.map((pizza) => <Ficha key={`carrito-${pizza.id}`} pizza={pizza} agregarCarrito={eliminarCarrito}></Ficha>)
+          }
+        </div>
       <Footer></Footer>
       
     </div>

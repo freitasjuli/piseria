@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Ficha = ({pizza}) => {
+const Ficha = ({pizza, agregarCarrito}) => {
     return ( 
         <div className='pizzaFicha'>
             <img src={pizza.img}></img>
@@ -15,8 +15,7 @@ const Ficha = ({pizza}) => {
             </ul>
             <hr></hr>
             <p>precio: ${pizza.price}</p>
-            <button>ver mas </button>
-            <button>comprar</button>
+            <button onClick={()=>agregarCarrito(pizza.id)}>comprar</button>
         </div>
         
     );
