@@ -1,20 +1,35 @@
 import React from 'react'
 
-const Ficha = ({nombre,ingredientes,precio,imagen}) => {
+const Ficha = ({pizza}) => {
     return ( 
         <div className='pizzaFicha'>
-            <img src={imagen}></img>
-            <h3>{nombre}</h3>
+            <img src={pizza.img}></img>
+            <h3>{pizza.name}</h3>
+            <p>{pizza.desc}</p>
             <hr></hr>
             <h4>Ingredientes:</h4>
-            <p>{ingredientes}</p>
+            <ul>
+                {
+                    pizza.ingredients.map((ingrediente) => <li>{ingrediente}</li>)
+                }
+            </ul>
             <hr></hr>
-            <p>precio: ${precio}</p>
+            <p>precio: ${pizza.price}</p>
             <button>ver mas </button>
             <button>comprar</button>
         </div>
+        
     );
 
 }
 
+{/*Ficha.proptypes = {
+    pizza: {
+        img: prototype.string,
+        name: prototype.string,
+        ingredients: prototype.string,
+        price: prototype.number,
+        desc: prototype.string,
+    }
+} */}
 export default Ficha;

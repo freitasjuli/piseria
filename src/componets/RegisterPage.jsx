@@ -29,7 +29,7 @@ const RegisterPage = () => {
     <div className='divformulario'>
         <h1>Formulario de registro</h1>
         <hr></hr>
-        <form >
+        <form>
             <label>
               Correo electronico
               <input type="email" onChange={(event)=>setEmail(event.target.value)}/>

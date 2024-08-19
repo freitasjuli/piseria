@@ -39,22 +39,31 @@
   align-items: center;
   padding: 10px 40px;
   background-color: white;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: auto;
+  
 }
 .pizzaFicha{
   border-color: #46433f9a;
-  width: 80%;
-  padding: 20px;
-  margin: 10px;
+  width: 30%;
+  margin: 10px auto;
+  padding: 15px;
   font-size: 20px;
   background-color: #ffe5cc79;
   border-radius: 3vh;
+
 }
 .pizzaFicha img {
-  width: 90%;
+  width: 80%;
   border-radius: 1vh;
+  margin: 10px;
 }
 .pizzaFicha h3, button{
   text-transform: uppercase;
+}
+.pizzaFicha li{
+  list-style: none;
 }
 .pizzaFicha button {
   font-size: 15px;
@@ -150,6 +159,7 @@
   border-radius: 100vh;
   border: none;
   transition: all 0.5s;
+  
 }
 .login button:hover{
   background: linear-gradient(#eb8e0b73,#eb8e0b73);
