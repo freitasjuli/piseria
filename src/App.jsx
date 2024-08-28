@@ -9,15 +9,19 @@ import Footer from './componets/Footer'
 import RegisterPage from './componets/RegisterPage'
 import Login from './componets/Login'
 import Home from './componets/Home'
+import Pizza from './componets/Pizza'
 
 
 
 function App() {
   return (
-    <>  
-    <Home></Home>
-    <RegisterPage></RegisterPage>
-    <Login></Login>
+    <>
+    <Navegacion></Navegacion>
+    <Pizza></Pizza>
+    {/* <Home></Home> */}
+    {/* <RegisterPage></RegisterPage> */}
+    {/* <Login></Login> */}
+    <Footer></Footer>
     </>
   )
 }
