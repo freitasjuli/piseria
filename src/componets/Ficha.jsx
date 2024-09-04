@@ -22,13 +22,13 @@ const Ficha = ({pizza, agregarCarrito}) => {
 
 }
 
-{/*Ficha.proptypes = {
-    pizza: {
-        img: prototype.string,
-        name: prototype.string,
-        ingredients: prototype.string,
-        price: prototype.number,
-        desc: prototype.string,
-    }
-} */}
+// Ficha.proptypes = {
+//     pizza: {
+//         img: prototype.string,
+//         name: prototype.string,
+//         ingredients: prototype.string,
+//         price: prototype.number,
+//         desc: prototype.string,
+//     }
+// }
 export default Ficha;

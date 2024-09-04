@@ -165,3 +165,16 @@
   background: linear-gradient(#eb8e0b73,#eb8e0b73);
   padding: 10px 50px;
 }
+.error{
+  width: 100%;
+  height: 375px;
+  text-align: center;
+  align-items: center;
+  background-color: beige;
+  padding: 15% 0 0 0;
+}
+
+.error h2{
+  margin: 0;
+
+}

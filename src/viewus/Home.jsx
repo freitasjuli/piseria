@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Navegacion from './Navegacion'
-import Header from './Header'
-import Ficha from './Ficha'
-import Footer from './Footer'
+import Navegacion from '../componets/Navegacion'
+import Header from '../componets/Header'
+import Ficha from '../componets/Ficha'
+import Footer from '../componets/Footer'
 // import {pizza} from '../pizzas'
 
 const Home = () => {
@@ -50,7 +50,6 @@ const Home = () => {
             carrito.map((pizza) => <Ficha key={`carrito-${pizza.id}`} pizza={pizza} agregarCarrito={eliminarCarrito}></Ficha>)
           }
         </div>
-      <Footer></Footer>
       
     </div>
   )

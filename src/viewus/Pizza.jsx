@@ -12,7 +12,7 @@
         getPizza()
       }, [])
       return (
-        <div>
+        <div className='pizzaFicha'>
           <img src={pizza.img}></img>
           <h1>{pizza.name} </h1>
           <p>{pizza.price} </p>
