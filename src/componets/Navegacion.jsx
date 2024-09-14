@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useCatchPizzaCarrito } from '../context/CatchPizzaCarritoContext';
 
 const Navegacion = () => {
     const total = 25000;
     const token = false;
+    const {totalPizza} = useCatchPizzaCarrito()
     return (
         <div className="header">
             <Link to="/piseria" className='logo'>!Pizzeria Mamma Mia¡</Link>
@@ -16,6 +18,7 @@ const Navegacion = () => {
                     <li><Link to="/register">Register</Link></li>
                     <li><Link to="/carrito">carrito</Link></li>
                     <li><Link to="/pizza">Pizza</Link></li>
+                    <li>Valos de las Pizzas {totalPizza} </li>
                 </ul>
             </nav>
         </div>

@@ -1,8 +1,11 @@
 import React from 'react'
+import { useCatchPizzaCarrito } from '../context/CatchPizzaCarritoContext';
 
-const Ficha = ({pizza, agregarCarrito}) => {
+const Ficha = (pizza) => {
+    const { addtotalCarrito } = useCatchPizzaCarrito()
+    const { addFichaCarrito } = useCatchPizzaCarrito()
     return ( 
-        <div className='pizzaFicha'>
+        <div className='pizzaFicha' key={`ficha-${pizza.id}`}>
             <img src={pizza.img}></img>
             <h3>{pizza.name}</h3>
             <p>{pizza.desc}</p>
@@ -15,7 +18,7 @@ const Ficha = ({pizza, agregarCarrito}) => {
             </ul>
             <hr></hr>
             <p>precio: ${pizza.price}</p>
-            <button onClick={()=>agregarCarrito(pizza.id)}>comprar</button>
+            <button onClick={()=>{addtotalCarrito(pizza.price), addFichaCarrito(pizza)}}>comprar</button>
         </div>
         
     );

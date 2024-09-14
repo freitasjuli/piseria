@@ -8,49 +8,26 @@ import Footer from '../componets/Footer'
 const Home = () => {
     const [pizza, setPizza] = useState([]);
 
-    const getPizza = async() =>{
+    const getPizzas = async() =>{
       const respuesta = await fetch('http://localhost:5000/api/pizzas')
-      const pizza = await respuesta.json();
+      const pizzas = await respuesta.json();
 
-      setPizza(pizza)
+      setPizza(pizzas)
     }
     useEffect(()=>{
-      getPizza()
+      getPizzas()
       
     }, [])
-    const [listaPizza, setListaPizza] = useState(pizza);
-    const [carrito, setCarrito] = useState([]);
     
-    const agregarCarrito = (id) => {
-      const product = listaPizza.find((pizza)=> pizza.id === id)
-      setCarrito([...carrito, product])
-      console.log(carrito)
-    }
-    const eliminarCarrito =(id ) => {
-      const indiceProducto = carrito.findIndex(pizza.id === id)
-      setCarrito((estadoPrevio)=>{
-        const nuevoCarrito = [...estadoPrevio]
-        nuevoCarrito.splice(indiceProducto, 1)
-        return nuevoCarrito
-      })
-    }
+    
   return (
     <div>
         <Header></Header>
          <div className='divFicha'>
           {
-            listaPizza.map((pizza) => <Ficha key={`home-${pizza.id}`} pizza={pizza} agregarCarrito={agregarCarrito}></Ficha>)
-          }
-          
-        </div>
-        
-        <h2>Carrito</h2>
-        <div className='divficha'>
-          {
-            carrito.map((pizza) => <Ficha key={`carrito-${pizza.id}`} pizza={pizza} agregarCarrito={eliminarCarrito}></Ficha>)
+            pizza.map((tipo) => <Ficha key={`home-${tipo.id}`} pizza={tipo} ></Ficha>)
           }
         </div>
-      
     </div>
   )
 }

@@ -12,6 +12,7 @@ import Home from './viewus/Home'
 import Pizza from './viewus/Pizza'
 import { Route, Routes } from 'react-router-dom'
 import Page404 from './viewus/Page404'
+import Carrito from './viewus/Carrito'
 
 
 
@@ -24,8 +25,8 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<RegisterPage></RegisterPage>}></Route>
         <Route path='/profile' element={<RegisterPage></RegisterPage>}></Route>
-        <Route path='/carrito' element={<RegisterPage></RegisterPage>}></Route>
-        <Route path='/pizza' element={<RegisterPage></RegisterPage>}></Route>
+        <Route path='/carrito' element={<Carrito></Carrito>}></Route>
+        <Route path='/pizza' element={<Pizza></Pizza>}></Route>
         <Route path='/*' element={<Page404></Page404>}></Route>
       </Routes>
     <Footer></Footer>
