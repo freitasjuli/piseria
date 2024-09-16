@@ -21,7 +21,7 @@
   color: #ffffff;
   list-style: none;
 }
-.botones a{
+.notActive{
   display: block;
   text-transform: uppercase;
   padding: 10px;
@@ -30,10 +30,14 @@
   color: white;
   text-decoration: none;
 }
-.botones a:hover {
+.notActive:hover {
   border-bottom: 4px solid #db880b;
 }
 @media (max-width:760px){
   
 
+}
+
+.active{
+  background-color: #db880b;
 }

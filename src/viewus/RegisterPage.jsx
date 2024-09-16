@@ -1,28 +1,31 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import UsuarioContext from '../context/UsuarioContext';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [conFirmPassword, setConfirmPassword] = useState("")
-
+  const [conFirmPassword, setConfirmPassword] = useState("");
+  const[ setUsuario ] = useContext(UsuarioContext);
+  const navegar = useNavigate();
+  
   const validarFormulario = ()=>{
   
     if(email === "" || password === "" || conFirmPassword === ""){
       alert("Faltan campos ");
       return false; 
-    }
-
-    if(password.length < 6 ){
+    } else if(password.length < 6 ){
       alert('La contraseña deve ser de 6 o mas caracteres');
       return false;
-    }
-    
-    if (password !== conFirmPassword){
+    }else if (password !== conFirmPassword){
       alert('la contraseñas no son iguales');
       return false;
+    }else {
+      setUsuario(true);
+      navegar('/piseria');
     }
 
-    alert('datos enviados')
+    
   }   
 
   return (
@@ -43,6 +46,7 @@ const RegisterPage = () => {
               <input type="password"onChange={(event)=>setConfirmPassword(event.target.value)}/>
             </label>
             <button Type="button" onClick={() => validarFormulario()}>Enviar </button>
+            <button type='button' onClick={()=>navegar('/login')}>ya tengo usuario</button>
         </form>
     </div>
   )

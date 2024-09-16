@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import CatchPizzaProvider from './context/CatchPizzaCarritoContext.jsx'
+import UsuarioContext from './context/UsuarioContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <CatchPizzaProvider>
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>
-  </CatchPizzaProvider>
-  ,
+    <CatchPizzaProvider>
+        <UsuarioContext.provider>
+            <BrowserRouter>
+                <App/>
+            </BrowserRouter>
+        </UsuarioContext.provider>
+    </CatchPizzaProvider>
 )

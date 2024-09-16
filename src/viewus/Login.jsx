@@ -1,19 +1,23 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import UsuarioContext from '../context/UsuarioContext';
 
 const Login = () => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const[ setUsuario ] = useContext(UsuarioContext);
+    
     const validarLogin =() =>{
-        if(email === ""|| password === ""){
-            alert('Ahi cambos incompletos');
+        if(email === "pizza@gmail.com"|| password === "Pizzarica"){
+            alert('Ahi cambos incompletos o erroneos ');
             return false
-        }
-
-        if(password.length <6){
+        }else if(password.length <6){
             alert('La contraseña debe tener 6 o mas caracteres')
+        }else {
+            setUsuario(true);
+            navegar('/piseria');
         }
 
-        alert('ingreso completado')
+        
     }
 
   return (

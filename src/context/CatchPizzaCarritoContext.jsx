@@ -1,15 +1,16 @@
-import { Children, createContext, useContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
-const CatchPizzaCarritoContext = createContext({Children});
-const CatchPizzaProvider = () => {
+export const CatchPizzaCarritoContext = createContext();
+
+const CatchPizzaProvider = ({Children}) => {
     const [totalPizza, setTotalPizza] = useState(0);
-    const [idPizza, setIdPizza] = useState([]);
+    const [pizza, setIdPizza] = useState([]);
 
     const addtotalCarrito = (totalPizza)=>{
         setTotalPizza((prevpizza)=> prevpizza + totalPizza)
     }
-    const addFichaCarrito = (pizzaId) =>{
-        setIdPizza((prevIDPizza)=>[...prevIDPizza,pizzaId])
+    const addFichaCarrito = (pizza) =>{
+        setIdPizza((prevPizza)=>[...prevPizza,pizza])
     }
     useEffect(()=>{
         addtotalCarrito();
@@ -17,16 +18,10 @@ const CatchPizzaProvider = () => {
     },[totalPizza])
     
     return (
-        <CatchPizzaCarritoContext.Provider value={{totalPizza, addtotalCarrito, addFichaCarrito}}>
+        <CatchPizzaCarritoContext.Provider value={{totalPizza, pizza, addtotalCarrito, addFichaCarrito}}>
             {Children}
         </CatchPizzaCarritoContext.Provider>
     )
 }
 
-export const useCatchPizzaCarrito = () => {
-    return (
-        useContext(CatchPizzaCarritoContext)
-    )
-}
-
-export default CatchPizzaProvider
+export default CatchPizzaProvider;

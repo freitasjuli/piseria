@@ -1,9 +1,12 @@
-import React from 'react'
-import { useCatchPizzaCarrito } from '../context/CatchPizzaCarritoContext';
+import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Ficha = (pizza) => {
-    const { addtotalCarrito } = useCatchPizzaCarrito()
-    const { addFichaCarrito } = useCatchPizzaCarrito()
+    const navegar = useNavigate();
+    const {totalPizza, addtotalCarrito, addFichaCarrito}= useContext(CatchPizzaCarritoContext); 
+    const verPizza = () => {
+        navegar(`/pizza/${pizza.id}`);
+    }
     return ( 
         <div className='pizzaFicha' key={`ficha-${pizza.id}`}>
             <img src={pizza.img}></img>
@@ -19,6 +22,7 @@ const Ficha = (pizza) => {
             <hr></hr>
             <p>precio: ${pizza.price}</p>
             <button onClick={()=>{addtotalCarrito(pizza.price), addFichaCarrito(pizza)}}>comprar</button>
+            <button onClick={verPizza}>detalles </button>
         </div>
         
     );
