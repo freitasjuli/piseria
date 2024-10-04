@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-export const UsuarioContext = createContext('');
+export const UsuarioContext = createContext(localStorage.getItem('token'));
 
 import React from 'react'
 
