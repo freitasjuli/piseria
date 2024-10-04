@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
-import CatchPizzaProvider from './context/CatchPizzaCarritoContext.jsx'
-import UsuarioContext from './context/UsuarioContext.jsx'
+import { CatchPizzaCarritoContext } from './context/CatchPizzaCarritoContext.jsx'
+import {UsuarioContext} from './context/UsuarioContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <CatchPizzaProvider>
-        <UsuarioContext.provider>
+    <UsuarioContext.provider>
+        <CatchPizzaCarritoContext.Provider> 
             <BrowserRouter>
                 <App/>
             </BrowserRouter>
-        </UsuarioContext.provider>
-    </CatchPizzaProvider>
+        </CatchPizzaCarritoContext.Provider>
+    </UsuarioContext.provider>
 )
